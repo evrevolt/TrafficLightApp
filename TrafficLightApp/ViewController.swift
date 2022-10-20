@@ -26,15 +26,19 @@ class ViewController: UIViewController {
         
         //Get radius view
         //Делаем так, потому что на маленьких устройствах иначе не получается круг
-        redView.layer.cornerRadius = redView.frame.width / 2
-        yellowView.layer.cornerRadius = yellowView.frame.width / 2
-        greenView.layer.cornerRadius = greenView.frame.width / 2
         
         //Закругляем кнопку
         startButton.layer.cornerRadius = 10
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        greenView.layer.cornerRadius = greenView.frame.width / 2
     }
 
     @IBAction func startButtonAction(_ sender: UIButton) {
