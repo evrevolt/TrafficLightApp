@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     }
     
     //Get radius view
-    //Делаем так, потому что на маленьких устройствах иначе не получается круг
     override func viewDidLayoutSubviews() {
         redView.layer.cornerRadius = redView.frame.width / 2
         yellowView.layer.cornerRadius = yellowView.frame.width / 2
@@ -37,7 +36,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButtonAction() {
-        
         //Меняем название кнопки
         startButton.setTitle("NEXT", for: .normal)
         
